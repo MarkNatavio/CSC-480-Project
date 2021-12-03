@@ -12,8 +12,9 @@ def enc(g, p, key, m, pk): # El Gamal Encryption Scheme
   Outputs:
   c1, c2 - Encrypted messages
   '''
-  c1 = pow(g,key,p)
+  c1 = pow(g,key,p) # getting c1
   
-  g2 = pow(g,pk,p)
-  c2 = (m*(pow(g2,key)))%p
+  g2 = pow(g,pk,p) # encryption with private key
+  c2 = (m*(pow(g2,key)))%p # getting c2
+  
   return c1, c2
