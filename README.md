@@ -49,6 +49,6 @@
   - output:
 
   ```
-    > > Encryption of 50 is: {'c1': 39, 'c2': 2750}
-    > > Deccryption of {'c1': 39, 'c2': 2750} is: 50.0
+    > > Encryption of 50 is: {'c1': 40, 'c2': 48}
+    > > Deccryption of {'c1': 40, 'c2': 48} is: 50.0
   ```
