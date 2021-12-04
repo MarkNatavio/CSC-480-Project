@@ -1,8 +1,9 @@
 from random_real_num_gen import rnum_keygen_o
 import keys
 
+
 def prime_gen():
-    prime = rnum_keygen_o(keys.MAX_NUM_2048)
+    prime = rnum_keygen_o(1, keys.MAX_NUM_2048)
     op = True
     if prime == 0 or prime == 1:
         op = False
