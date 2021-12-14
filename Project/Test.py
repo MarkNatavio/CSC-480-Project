@@ -26,12 +26,12 @@ def normal_version_main():
 
     print("Alice gonna send the meassge : ", msg,"to Bob")
 
-    Alice_enc=encryption.normal_version_enc(g,p,Alice_sk,msg,Bob_pk)# Alice gonna encryp the msg by using her secret key and Bob's public key
+    Alice_enc=encryption.normal_version_enc(g,p,Alice_sk,msg,Bob_pk)# Alice gonna encrypt the msg by using her secret key and Bob's public key
     print("Encrypted meassage: ", Alice_enc)
 
     c1=Alice_enc[0]
     c2=Alice_enc[1]
-    Bob_dec=decryption.normal_version_elgamal_dec(c1,c2,p,Bob_sk) #Bob gonn decry the encrypted msg by using his secret key.
+    Bob_dec=decryption.normal_version_elgamal_dec(c1,c2,p,Bob_sk) #Bob gonn decrypt the encrypted msg by using his secret key.
     print("Bob decrypted the cipertext from Alice and got the plaintext:  ",Bob_dec)
     
 
