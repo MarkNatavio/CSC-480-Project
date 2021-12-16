@@ -30,11 +30,13 @@ def normal_version_elgamal_dec(y1,y2,p,rsk):
     y2: cipytertext y2
     p: prime number
     rsk: receiver's secret key
-
     output
     dec_m: decrypted message
     """
-    dec_m = pow(y1,(p-rsk-1))*y2%p
+    dec_m=[]
+    for i in range(0, len(y2)):
+         dec_m.append(chr(pow(y1,(p-rsk-1))*int(y2[i])%p))
+
     return dec_m
 
 
