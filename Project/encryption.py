@@ -30,15 +30,24 @@ def normal_version_enc(g, p, ssk, m, rpk): # Normal version of El Gamal Encrypti
   ssk - sender's secret key
   m - message
   rpk- receiver's public key   =  g^(receiver's secret key) mod p
-
   Outputs:
   y1, y2 - Encrypted messages
   '''
-  y1 = pow(g,ssk,p) # getting c1
+
+
+  enc_m = []
+  for i in range(0, len(m)):
+        enc_m.append(m[i])
   
-  y2 = (m*pow(rpk,ssk)) % p # getting c2
+  for i in range(0, len(enc_m)):
+        enc_m[i] = (ord(enc_m[i])*pow(rpk,ssk)) % p 
+
+  y1 = pow(g,ssk,p) # getting c1
+  y2= enc_m        # getting c2
+ # y2 = (m*pow(rpk,ssk)) % p 
   
   return y1, y2
+
 
 '''
 Example of Alice sending meassge to Bob by using normal version of Elgamal encryption and decryption.
